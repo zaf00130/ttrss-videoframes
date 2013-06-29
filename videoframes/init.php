@@ -15,7 +15,14 @@ class VideoFrames extends Plugin {
 		'www.myvideo.de' => '/embed/',
 		'www.dailymotion.com' => '/embed/video/',
 		'www.viddler.com' => '/embed/',
-		'w.soundcloud.com' => '/player/'
+		'w.soundcloud.com' => '/player/',
+		'eplayer.clipsyndicate.com' => '/embed/',
+		'www.liveleak.com' => '/ll_embed',
+		'embed.newsinc.com' => '/Single/',
+		'www.facebook.com' => '/video/embed',
+		'www.kickstarter.com' => '/projects/',
+		'www.scribd.com' => '/embeds/',
+		'videos.mediaite.com' => '/embed/player/'
 	);
 
 	/**
