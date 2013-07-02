@@ -100,7 +100,7 @@ class VideoFrames extends Plugin {
 				// force https
 				// http_build_url would be the nice solution,
 				// but that's apparently not available everywhere
-				$src = preg_replace('#^[a-z]+://#i', 'https://',
+				$src = preg_replace('#^[a-z]+://#i', 'http://',
 					$src, -1, $rcount);
 				if ($rcount < 1) { // if this happens the url is really strange
 					continue;
@@ -136,7 +136,7 @@ class VideoFrames extends Plugin {
 					parse_str($url['query'], $query);
 					if (array_key_exists($querykey, $query) &&
 						preg_match('/^[a-zA-Z0-9_]+$/', $query[$querykey])) {
-						$iframesrc = 'https://' . $newhost .
+						$iframesrc = 'http://' . $newhost .
 							str_replace('$1',
 								$query[$querykey],
 								$replace
@@ -145,7 +145,7 @@ class VideoFrames extends Plugin {
 						continue;
 					}
 				} else { // not a query string, use path
-					$iframesrc = 'https://' . $newhost .
+					$iframesrc = 'http://' . $newhost .
 						preg_replace($pattern,
 							$replace,
 							$url['path'],
@@ -202,7 +202,7 @@ class VideoFrames extends Plugin {
 		// unfortunately parse_url won't support urls without protocol
 		// (albeit apparently allowed by the RFC...)
 		if (strpos($src, '//') === 0) {
-			$src = 'https:' . $src;
+			$src = 'http:' . $src;
 		}
 
 		return $src;
