@@ -22,7 +22,8 @@ class VideoFrames extends Plugin {
 		'www.facebook.com' => '/video/embed',
 		'www.kickstarter.com' => '/projects/',
 		'www.scribd.com' => '/embeds/',
-		'videos.mediaite.com' => '/embed/player/'
+		'videos.mediaite.com' => '/embed/player/',
+		'vine.co' => '/v/'
 	);
 
 	/**
