@@ -24,7 +24,8 @@ class VideoFrames extends Plugin {
 		'www.scribd.com' => '/embeds/',
 		'videos.mediaite.com' => '/embed/player/',
 		'vine.co' => '/v/',
-		'player.cnevids.com' => '/embed/'
+		'player.cnevids.com' => '/embed/',
+		'gfycat.com' => '/ifr/'
 	);
 
 	/**
@@ -63,6 +64,10 @@ class VideoFrames extends Plugin {
 		'www.dailymotion.com' => array(
 			'#^/swf/video/([a-zA-Z0-9_]+)(&.*)?$#',
 			'#/embed/video/$1#'
+		),
+		'gfycat.com' => array(
+			'#^/amp/([a-zA-Z0-9_]+)(&.*)?$#',
+			'/ifr/$1#'
 		)
 	);
 
